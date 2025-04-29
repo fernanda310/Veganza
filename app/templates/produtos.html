@@ -25,7 +25,7 @@ Produtos - Veganza
     <!-- Admin Button -->
     {% if current_user.email == 'admin@gmail.com' %}
     <div class="d-flex justify-content-center mb-4">
-      <a href="{{ url_for('criar_produto') }}" class="btn btn-primary btn-lg">
+      <a href="{{ url_for('criar_produto') }}" class="btn btn-success btn-lg">
         <i class="fas fa-plus-circle me-2"></i>Criar Novo Produto
       </a>
     </div>
@@ -56,7 +56,24 @@ Produtos - Veganza
       <div class="col">
         <div class="product-card">
           <div class="product-image">
-            <img src="{{ url_for('static', filename='img/' + (item.imagem if item.imagem else 'default.jpg')) }}" alt="{{ item.nome }}">
+            {% if item.imagem %}
+              <img src="{{ url_for('static', filename='img/' + item.imagem) }}" alt="{{ item.nome }}">
+            {% else %}
+              {% if loop.index % 6 == 1 %}
+                <img src="{{ url_for('static', filename='img/hamburger-vegetal.jpeg') }}" alt="{{ item.nome }}">
+              {% elif loop.index % 6 == 2 %}
+                <img src="{{ url_for('static', filename='img/chocolate-vegano.jpeg') }}" alt="{{ item.nome }}">
+              {% elif loop.index % 6 == 3 %}
+                <img src="{{ url_for('static', filename='img/sorvete-vegano.png') }}" alt="{{ item.nome }}">
+              {% elif loop.index % 6 == 4 %}
+                <img src="{{ url_for('static', filename='img/kibe-vegano.jpeg') }}" alt="{{ item.nome }}">
+              {% elif loop.index % 6 == 5 %}
+                <img src="{{ url_for('static', filename='img/carne-moida-vegana.jpeg') }}" alt="{{ item.nome }}">
+              {% else %}
+                <img src="{{ url_for('static', filename='img/pipoca-caramelo.jpeg') }}" alt="{{ item.nome }}">
+              {% endif %}
+            {% endif %}
+            
             {% if loop.index == 1 %}
             <div class="product-tag">Popular</div>
             {% elif loop.index == 2 %}
@@ -70,7 +87,7 @@ Produtos - Veganza
             <div class="product-price">R$ {{ item.preco }}</div>
             <p class="product-description">{{ item.descricao|truncate(80) }}</p>
             <div class="product-actions">
-              <a href="{{ url_for('page_produto_detalhes', produto_id=item.Id) }}" class="btn btn-primary">
+              <a href="{{ url_for('page_produto_detalhes', produto_id=item.Id) }}" class="btn btn-success">
                 {% if current_user.email != 'admin@gmail.com' %}
                 <i class="fas fa-shopping-cart me-2"></i>Comprar
                 {% else %}
