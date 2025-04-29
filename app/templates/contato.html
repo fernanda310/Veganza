@@ -5,80 +5,589 @@ Contato - Veganza
 {% endblock %}
 
 {% block conteudo %}
-<div class="contact-container fade-in">
-  <div class="contact-header">
-    <h2><i class="fas fa-comments me-2"></i>Fale Conosco</h2>
-    <p>Estamos aqui para ajudar. Entre em contato conosco através dos meios abaixo.</p>
-  </div>
-  
-  <div class="contact-info">
-    <div class="info-item">
-      <i class="fas fa-map-marker-alt"></i>
-      <div>
-        <h5>Endereço</h5>
-        <p>Rua Exemplo, 123, Bairro, Cidade - Estado</p>
+<!-- Hero Section -->
+<section class="contact-hero">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <h1 class="contact-title">Fale Conosco</h1>
+        <p class="contact-subtitle">Estamos aqui para ajudar. Entre em contato conosco através dos meios abaixo ou preencha o formulário.</p>
       </div>
-    </div>
-    
-    <div class="info-item">
-      <i class="fas fa-phone-alt"></i>
-      <div>
-        <h5>Telefone</h5>
-        <p>(11) 1234-5678</p>
-      </div>
-    </div>
-    
-    <div class="info-item">
-      <i class="fas fa-envelope"></i>
-      <div>
-        <h5>Email</h5>
-        <p>contato@veganza.com</p>
+      <div class="col-lg-6">
+        <img src="{{ url_for('static', filename='img/contact-hero.png') }}" alt="Contato" class="img-fluid contact-hero-image">
       </div>
     </div>
   </div>
+  <div class="hero-shape">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,149.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+    </svg>
+  </div>
+</section>
 
-  <div class="about-section fade-in" style="animation-delay: 0.2s;">
-    <h3 class="about-title"><i class="fas fa-leaf me-2"></i>Sobre a Veganza</h3>
-    <p class="about-text">A Veganza é um e-commerce dedicado a oferecer produtos veganos de alta qualidade. Nosso compromisso é proporcionar uma experiência de compra consciente, com foco na sustentabilidade e no respeito ao meio ambiente. Trabalhamos com valores de ética, transparência e responsabilidade social, sempre buscando o melhor para nossos clientes e para o planeta.</p>
-    
-    <div class="row mt-4">
-      <div class="col-md-4 text-center mb-3">
-        <div class="value-icon">
-          <i class="fas fa-heart fa-2x text-success"></i>
+<div class="container">
+  <div class="contact-main">
+    <div class="row">
+      <!-- Contact Form -->
+      <div class="col-lg-7 mb-5 mb-lg-0">
+        <div class="contact-form-card">
+          <h3 class="mb-4">Envie uma mensagem</h3>
+          <form id="contactForm">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="name" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="name" placeholder="Seu nome">
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="seu.email@exemplo.com">
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="subject" class="form-label">Assunto</label>
+              <input type="text" class="form-control" id="subject" placeholder="Assunto da mensagem">
+            </div>
+            <div class="mb-4">
+              <label for="message" class="form-label">Mensagem</label>
+              <textarea class="form-control" id="message" rows="5" placeholder="Digite sua mensagem aqui..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">
+              <i class="fas fa-paper-plane me-2"></i>Enviar Mensagem
+            </button>
+          </form>
         </div>
-        <h5>Compaixão</h5>
-        <p>Respeitamos todas as formas de vida</p>
       </div>
       
-      <div class="col-md-4 text-center mb-3">
-        <div class="value-icon">
-          <i class="fas fa-globe-americas fa-2x text-success"></i>
+      <!-- Contact Info -->
+      <div class="col-lg-5">
+        <div class="contact-info-card">
+          <h3 class="mb-4">Informações de Contato</h3>
+          
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-info-content">
+              <h5>Endereço</h5>
+              <p>Rua Exemplo, 123, Bairro<br>Cidade - Estado</p>
+            </div>
+          </div>
+          
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="contact-info-content">
+              <h5>Telefone</h5>
+              <p>(11) 1234-5678</p>
+            </div>
+          </div>
+          
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-info-content">
+              <h5>Email</h5>
+              <p>contato@veganza.com</p>
+            </div>
+          </div>
+          
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="contact-info-content">
+              <h5>Horário de Atendimento</h5>
+              <p>Segunda a Sexta: 9h às 18h<br>Sábado: 9h às 13h</p>
+            </div>
+          </div>
+          
+          <div class="contact-social">
+            <h5>Siga-nos</h5>
+            <div class="contact-social-icons">
+              <a href="#" class="contact-social-icon"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="contact-social-icon"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="contact-social-icon"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
         </div>
-        <h5>Sustentabilidade</h5>
-        <p>Comprometidos com o meio ambiente</p>
-      </div>
-      
-      <div class="col-md-4 text-center mb-3">
-        <div class="value-icon">
-          <i class="fas fa-seedling fa-2x text-success"></i>
-        </div>
-        <h5>Qualidade</h5>
-        <p>Produtos naturais e saudáveis</p>
       </div>
     </div>
   </div>
 </div>
 
+<!-- Map Section -->
+<div class="map-section">
+  <div class="container">
+    <div class="map-container">
+      <h3 class="text-center mb-4">Nossa Localização</h3>
+      <div class="map-frame">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1976900292864!2d-46.65868382378026!3d-23.56518137881124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1682531248584!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- About Section -->
+<section class="about-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="about-header text-center">
+          <h2><i class="fas fa-leaf me-2"></i>Sobre a Veganza</h2>
+          <p class="about-text">A Veganza é um e-commerce dedicado a oferecer produtos veganos de alta qualidade. Nosso compromisso é proporcionar uma experiência de compra consciente, com foco na sustentabilidade e no respeito ao meio ambiente. Trabalhamos com valores de ética, transparência e responsabilidade social, sempre buscando o melhor para nossos clientes e para o planeta.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row mt-5">
+      <div class="col-md-4 mb-4">
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fas fa-heart"></i>
+          </div>
+          <h4>Compaixão</h4>
+          <p>Respeitamos todas as formas de vida</p>
+        </div>
+      </div>
+      
+      <div class="col-md-4 mb-4">
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fas fa-globe-americas"></i>
+          </div>
+          <h4>Sustentabilidade</h4>
+          <p>Comprometidos com o meio ambiente</p>
+        </div>
+      </div>
+      
+      <div class="col-md-4 mb-4">
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fas fa-seedling"></i>
+          </div>
+          <h4>Qualidade</h4>
+          <p>Produtos naturais e saudáveis</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="faq-header text-center">
+          <h2>Perguntas Frequentes</h2>
+          <p>Encontre respostas para as dúvidas mais comuns</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row mt-4">
+      <div class="col-lg-10 mx-auto">
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Como faço para rastrear meu pedido?
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Após a confirmação do envio, você receberá um e-mail com o código de rastreamento. Você também pode acessar as informações de rastreamento na sua conta, na seção "Meus Pedidos".
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Qual é o prazo de entrega?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                O prazo de entrega varia de acordo com a sua localização. Em geral, entregamos em capitais e regiões metropolitanas em 2 a 5 dias úteis. Para outras localidades, o prazo pode ser de 5 a 10 dias úteis.
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Como posso fazer uma troca ou devolução?
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Para solicitar uma troca ou devolução, entre em contato conosco em até 7 dias após o recebimento do produto. Envie um e-mail para contato@veganza.com com o número do pedido e o motivo da troca ou devolução.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <style>
-  .value-icon {
-    width: 70px;
-    height: 70px;
+  /* Contact Hero Section */
+  .contact-hero {
+    background: linear-gradient(135deg, #2ba536 0%, #1e7e34 100%);
+    color: white;
+    padding: 200px 0 300px;
+    position: relative;
+    overflow: hidden;
+    min-height: 600px;
+  }
+  
+  .contact-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-subtitle {
+    font-size: 1.5rem;
+    opacity: 0.9;
+    max-width: 90%;
+    line-height: 1.6;
+  }
+  
+  .contact-hero-image {
+    animation: float 6s ease-in-out infinite;
+    max-height: 400px;
+  }
+  
+  .hero-shape {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+  }
+  
+  .contact-main {
+    margin-top: -100px;
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .contact-form-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    height: 100%;
+  }
+  
+  .contact-info-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    height: 100%;
+  }
+  
+  .contact-info-item {
+    display: flex;
+    margin-bottom: 30px;
+  }
+  
+  .contact-info-icon {
+    width: 50px;
+    height: 50px;
     background-color: rgba(43, 165, 54, 0.1);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 15px;
+    margin-right: 20px;
+    flex-shrink: 0;
+  }
+  
+  .contact-info-icon i {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+  }
+  
+  .contact-info-content h5 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--text-color);
+  }
+  
+  .contact-info-content p {
+    color: var(--light-text);
+    margin-bottom: 0;
+  }
+  
+  .contact-social {
+    margin-top: 40px;
+  }
+  
+  .contact-social h5 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  .contact-social-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .contact-social-icon {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(43, 165, 54, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+  }
+  
+  .contact-social-icon:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-5px);
+  }
+  
+  /* Map Section */
+  .map-section {
+    padding: 0 0 80px;
+  }
+  
+  .map-container {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .map-frame {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+  }
+  
+  /* About Section */
+  .about-section {
+    padding: 80px 0;
+    background-color: var(--secondary-color);
+  }
+  
+  .about-header h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .about-text {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--light-text);
+  }
+  
+  .value-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+  }
+  
+  .value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .value-icon {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(43, 165, 54, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+  }
+  
+  .value-icon i {
+    font-size: 2rem;
+    color: var(--primary-color);
+  }
+  
+  .value-card h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text-color);
+  }
+  
+  .value-card p {
+    color: var(--light-text);
+    margin-bottom: 0;
+  }
+  
+  /* FAQ Section */
+  .faq-section {
+    padding: 80px 0;
+    background-color: white;
+  }
+  
+  .faq-header {
+    margin-bottom: 40px;
+  }
+  
+  .faq-header h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  
+  .faq-header p {
+    color: var(--light-text);
+    font-size: 1.1rem;
+  }
+  
+  .accordion-item {
+    border: none;
+    margin-bottom: 15px;
+    border-radius: var(--border-radius) !important;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .accordion-button {
+    padding: 20px 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    background-color: white;
+  }
+  
+  .accordion-button:not(.collapsed) {
+    color: var(--primary-color);
+    background-color: rgba(43, 165, 54, 0.05);
+  }
+  
+  .accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(43, 165, 54, 0.1);
+  }
+  
+  .accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%232ba536'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  }
+  
+  .accordion-body {
+    padding: 20px 30px;
+    color: var(--light-text);
+  }
+  
+  /* Form Styling */
+  .form-control {
+    padding: 12px 20px;
+    border-radius: var(--border-radius);
+    border: 1px solid #e2e2e2;
+  }
+  
+  .form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(43, 165, 54, 0.25);
+    border-color: var(--primary-color);
+  }
+  
+  /* Responsive */
+  @media (max-width: 992px) {
+    .contact-title {
+      font-size: 3rem;
+    }
+    
+    .contact-hero {
+      padding: 150px 0 250px;
+      min-height: 500px;
+    }
+    
+    .contact-hero-image {
+      margin-top: 30px;
+    }
+    
+    .contact-form-card,
+    .contact-info-card {
+      padding: 30px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .contact-title {
+      font-size: 2.5rem;
+    }
+    
+    .contact-hero {
+      padding: 100px 0 200px;
+      min-height: 400px;
+    }
+    
+    .about-header h2,
+    .faq-header h2 {
+      font-size: 2rem;
+    }
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
   }
 </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Form submission handling
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+        
+        // Simple validation
+        if (!name || !email || !subject || !message) {
+          alert('Por favor, preencha todos os campos.');
+          return;
+        }
+        
+        // Here you would normally send the form data to a server
+        // For now, we'll just show a success message
+        alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+        contactForm.reset();
+      });
+    }
+  });
+</script>
 {% endblock %}

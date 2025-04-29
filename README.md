@@ -44,6 +44,12 @@ Bem-vindo(a) ao **Veganza**, um projeto de e-commerce dedicado a produtos alimen
    .venv\Scripts\activate
    pip install -r requirements.txt
 
+## 🌐 Navegação
+
+    navegue por todas as nossas funcionalidades criando sua conta com segurança, para acessar o perfil de administrador utilize as credenciais:
+    admin
+    admin123
+    
 ## 📝 Contribuição
 Desenvolvido por:
 - [Fernanda Amorim](https://github.com/fernanda310)

@@ -14,11 +14,11 @@ Veganza - Produtos Veganos
         <p class="hero-subtitle">Descubra nossa seleção de produtos veganos de alta qualidade, produzidos com ingredientes naturais e sustentáveis.</p>
         <div class="hero-buttons">
           {% if current_user.is_authenticated %}
-          <a class="btn btn-light btn-lg hero-btn" href="{{url_for('page_produto')}}">
+          <a class="btn btn-outline-light btn-lg hero-btn" href="{{url_for('page_produto')}}">
             <i class="fas fa-shopping-basket me-2"></i>Explorar Produtos
           </a>
           {% else %}
-          <a class="btn btn-light btn-lg hero-btn" href="{{url_for('page_login')}}">
+          <a class="btn btn-outline-light btn-lg hero-btn" href="{{url_for('page_login')}}">
             <i class="fas fa-sign-in-alt me-2"></i>Entrar
           </a>
           <a class="btn btn-outline-light btn-lg hero-btn" href="{{url_for('page_cadastro')}}">
@@ -34,7 +34,7 @@ Veganza - Produtos Veganos
   </div>
   <div class="hero-shape">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,149.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+      <path fill="#ffffff" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,261.3C960,256,1056,224,1152,208C1248,192,1344,192,1392,192L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
     </svg>
   </div>
 </section>
@@ -116,7 +116,7 @@ Veganza - Produtos Veganos
         <div class="product-card">
           <div class="product-badge">Popular</div>
           <div class="product-image">
-            <img src="{{ url_for('static', filename='img/barrinha.jpeg') }}" alt="Hambúrguer Vegetal" class="product-img">
+            <img src="{{ url_for('static', filename='img/hamburger-vegetal.jpeg') }}" alt="Hambúrguer Vegetal" class="product-img">
           </div>
           <div class="product-info">
             <h3>Hambúrguer Vegetal</h3>
@@ -130,7 +130,7 @@ Veganza - Produtos Veganos
         <div class="product-card">
           <div class="product-badge">Novo</div>
           <div class="product-image">
-            <img src="{{ url_for('static', filename='img/barrinha.jpeg') }}" alt="Chocolate Vegano" class="product-img">
+            <img src="{{ url_for('static', filename='img/chocolate-vegano.jpeg') }}" alt="Chocolate Vegano" class="product-img">
           </div>
           <div class="product-info">
             <h3>Chocolate Vegano</h3>
@@ -144,7 +144,7 @@ Veganza - Produtos Veganos
         <div class="product-card">
           <div class="product-badge">Oferta</div>
           <div class="product-image">
-            <img src="{{ url_for('static', filename='img/barrinha.png') }}" alt="Sorvete Vegano" class="product-img">
+            <img src="{{ url_for('static', filename='img/sorvete-vegano.png') }}" alt="Sorvete Vegano" class="product-img">
           </div>
           <div class="product-info">
             <h3>Sorvete Vegano</h3>
