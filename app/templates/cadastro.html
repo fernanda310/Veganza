@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Cadastro - Veganza
+{% endblock %}
+
+{% block conteudo %}
+<div class="auth-page">
+  <div class="container">
+    <div class="auth-container">
+      <div class="row g-0">
+        <div class="col-lg-6">
+          <div class="auth-form-container">
+            <div class="auth-header">
+              <h2>Crie sua conta</h2>
+              <p>Junte-se a nós e descubra produtos veganos incríveis</p>
+            </div>
+            
+            <form method="POST" class="auth-form">
+              {{ form.hidden_tag() }}
+              
+              <div class="form-floating mb-3">
+                {{ form.usuario(class="form-control", id="floatingUsername", placeholder="Nome de usuário") }}
+                <label for="floatingUsername">Nome de usuário</label>
+              </div>
+              
+              <div class="form-floating mb-3">
+                {{ form.email(class="form-control", id="floatingEmail", placeholder="Email") }}
+                <label for="floatingEmail">Email</label>
+              </div>
+              
+              <div class="form-floating mb-3">
+                {{ form.senha1(class="form-control", id="floatingPassword1", placeholder="Senha") }}
+                <label for="floatingPassword1">Senha</label>
+              </div>
+              
+              <div class="form-floating mb-4">
+                {{ form.senha2(class="form-control", id="floatingPassword2", placeholder="Confirmar senha") }}
+                <label for="floatingPassword2">Confirmar senha</label>
+              </div>
+              
+              <div class="d-grid mb-4">
+                {{ form.submit(class="btn btn-primary btn-lg") }}
+              </div>
+              
+              <div class="text-center">
+                <p>Já possui uma conta? <a href="{{ url_for('page_login') }}" class="auth-link">Faça login</a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 d-none d-lg-block">
+          <div class="auth-image-container">
+            <img src="{{ url_for('static', filename='img/signup-image.png') }}" alt="Cadastro" class="auth-image">
+            <div class="auth-overlay">
+              <div class="auth-overlay-content">
+                <h3>Junte-se à comunidade Veganza</h3>
+                <p>Acesso a produtos exclusivos, ofertas especiais e muito mais.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

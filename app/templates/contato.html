@@ -1,0 +1,84 @@
+{% extends 'base.html' %} 
+
+{% block titulo %}
+Contato - Veganza
+{% endblock %}
+
+{% block conteudo %}
+<div class="contact-container fade-in">
+  <div class="contact-header">
+    <h2><i class="fas fa-comments me-2"></i>Fale Conosco</h2>
+    <p>Estamos aqui para ajudar. Entre em contato conosco através dos meios abaixo.</p>
+  </div>
+  
+  <div class="contact-info">
+    <div class="info-item">
+      <i class="fas fa-map-marker-alt"></i>
+      <div>
+        <h5>Endereço</h5>
+        <p>Rua Exemplo, 123, Bairro, Cidade - Estado</p>
+      </div>
+    </div>
+    
+    <div class="info-item">
+      <i class="fas fa-phone-alt"></i>
+      <div>
+        <h5>Telefone</h5>
+        <p>(11) 1234-5678</p>
+      </div>
+    </div>
+    
+    <div class="info-item">
+      <i class="fas fa-envelope"></i>
+      <div>
+        <h5>Email</h5>
+        <p>contato@veganza.com</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-section fade-in" style="animation-delay: 0.2s;">
+    <h3 class="about-title"><i class="fas fa-leaf me-2"></i>Sobre a Veganza</h3>
+    <p class="about-text">A Veganza é um e-commerce dedicado a oferecer produtos veganos de alta qualidade. Nosso compromisso é proporcionar uma experiência de compra consciente, com foco na sustentabilidade e no respeito ao meio ambiente. Trabalhamos com valores de ética, transparência e responsabilidade social, sempre buscando o melhor para nossos clientes e para o planeta.</p>
+    
+    <div class="row mt-4">
+      <div class="col-md-4 text-center mb-3">
+        <div class="value-icon">
+          <i class="fas fa-heart fa-2x text-success"></i>
+        </div>
+        <h5>Compaixão</h5>
+        <p>Respeitamos todas as formas de vida</p>
+      </div>
+      
+      <div class="col-md-4 text-center mb-3">
+        <div class="value-icon">
+          <i class="fas fa-globe-americas fa-2x text-success"></i>
+        </div>
+        <h5>Sustentabilidade</h5>
+        <p>Comprometidos com o meio ambiente</p>
+      </div>
+      
+      <div class="col-md-4 text-center mb-3">
+        <div class="value-icon">
+          <i class="fas fa-seedling fa-2x text-success"></i>
+        </div>
+        <h5>Qualidade</h5>
+        <p>Produtos naturais e saudáveis</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .value-icon {
+    width: 70px;
+    height: 70px;
+    background-color: rgba(43, 165, 54, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+  }
+</style>
+{% endblock %}

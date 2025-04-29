@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Produtos - Veganza
+{% endblock %}
+
+{% block conteudo %}
+<div class="products-page">
+  <!-- Hero Banner -->
+  <div class="products-hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <h1>Confira nossas ofertas incríveis!</h1>
+          <p>Produtos veganos selecionados com qualidade e preço justo para você.</p>
+        </div>
+        <div class="col-lg-5 text-center">
+          <img src="{{ url_for('static', filename='img/cart-icon.png') }}" class="img-fluid" alt="Ofertas">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container products-container">
+    <!-- Admin Button -->
+    {% if current_user.email == 'admin@gmail.com' %}
+    <div class="d-flex justify-content-center mb-4">
+      <a href="{{ url_for('criar_produto') }}" class="btn btn-primary btn-lg">
+        <i class="fas fa-plus-circle me-2"></i>Criar Novo Produto
+      </a>
+    </div>
+    {% endif %}
+
+    <!-- Search Form -->
+    <div class="search-container mb-4">
+      <form method="GET" action="{{ url_for('page_produto') }}">
+        <div class="input-group">
+          <input type="text" name="search" class="form-control search-input" placeholder="Pesquisar produtos..." value="{{ search_query }}">
+          <button type="submit" class="btn btn-search">
+            <i class="fas fa-search me-2"></i>Pesquisar
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Search Results -->
+    {% if search_query %}
+    <div class="search-results mb-4">
+      <h4>Resultados da pesquisa para "{{ search_query }}"</h4>
+    </div>
+    {% endif %}
+    
+    <!-- Products Grid -->
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      {% for item in itens %}
+      <div class="col">
+        <div class="product-card">
+          <div class="product-image">
+            <img src="{{ url_for('static', filename='img/' + (item.imagem if item.imagem else 'default.jpg')) }}" alt="{{ item.nome }}">
+            {% if loop.index == 1 %}
+            <div class="product-tag">Popular</div>
+            {% elif loop.index == 2 %}
+            <div class="product-tag">Novo</div>
+            {% elif loop.index == 3 %}
+            <div class="product-tag">Oferta</div>
+            {% endif %}
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">{{ item.nome }}</h3>
+            <div class="product-price">R$ {{ item.preco }}</div>
+            <p class="product-description">{{ item.descricao|truncate(80) }}</p>
+            <div class="product-actions">
+              <a href="{{ url_for('page_produto_detalhes', produto_id=item.Id) }}" class="btn btn-primary">
+                {% if current_user.email != 'admin@gmail.com' %}
+                <i class="fas fa-shopping-cart me-2"></i>Comprar
+                {% else %}
+                <i class="fas fa-eye me-2"></i>Visualizar
+                {% endif %}
+              </a>
+              
+              {% if current_user.email == 'admin@gmail.com' %}
+              <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal{{ item.Id }}">
+                <i class="fas fa-trash-alt me-1"></i>Excluir
+              </button>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Delete Confirmation Modals -->
+    {% for item in itens %}
+    <div class="modal fade" id="confirmDeleteModal{{ item.Id }}" tabindex="-1" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="confirmDeleteModalLabel">Confirmar Exclusão</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="text-center mb-4">
+              <i class="fas fa-exclamation-triangle text-warning fa-3x mb-3"></i>
+              <h4>Tem certeza?</h4>
+              <p>Você está prestes a excluir o produto "{{ item.nome }}".</p>
+              <p class="text-danger"><small>Esta ação não pode ser desfeita.</small></p>
+            </div>
+          </div>
+          <div class="modal-footer justify-content-center">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <form action="{{ url_for('excluir_produto', produto_id=item.Id) }}" method="POST" style="display: inline-block;">
+              <button type="submit" class="btn btn-danger">Excluir</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
