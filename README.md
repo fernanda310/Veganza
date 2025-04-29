@@ -72,35 +72,60 @@ O Veganza oferece todos os recursos esperados de um e-commerce moderno:
    ```bash
    git clone https://github.com/seu-usuario/veganza.git
    cd veganza
-   
-2. **Crie e ative o ambiente virtual:**
+   ```
+
+2. **Crie o ambiente virtual:**
 
    ```bash
    python -m venv .venv
+   ```
 
-  **No Windows:**
+3. **Ative o ambiente virtual:**
+
+   - **No Windows:**
+
+     ```bash
+     .venv\Scripts\activate
+     ```
+
+   - **No macOS/Linux:**
+
+     ```bash
+     source .venv/bin/activate
+     ```
+
+4. **Instale as dependências:**
+
    ```bash
-    .venv\Scripts\activate
+   pip install -r requirements.txt
+   ```
 
- **No macOS/Linux:**
-   ```bash
-  source .venv/bin/activate
+5. **Inicie a aplicação:**
 
-Instale as dependências:
-   ```bash
-  pip install -r requirements.txt
-
-Inicie a aplicação:
    ```bash
    flask run
+   ```
 
-Acesse no navegador:
-http://localhost:5000
+6. **Acesse no navegador:**
 
+   ```bash
+   http://localhost:5000
+   ```
+
+---
 
 ## 🤝 Contribuições
+
 Este projeto foi desenvolvido por:
-- [Fernanda Amorim](https://github.com/fernanda310)
+
+- [Fernanda Amorim](https://github.com/fernanda310)  
 - [Luana Nichellati](https://github.com/luanaNichelatti)
 
+Contribuições são bem-vindas!  
+Você pode abrir **issues**, enviar **pull requests** ou sugerir melhorias no repositório.
 
+---
+
+## 📄 Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
