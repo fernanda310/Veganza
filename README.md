@@ -1,56 +1,110 @@
-# 🌱 Veganza - Loja de Produtos Veganos
+🌱 Veganza - Loja de Produtos Veganos
+Bem-vindo(a) ao Veganza, um e-commerce moderno e acessível dedicado exclusivamente à venda de produtos alimentícios 100% veganos! Este projeto tem como missão oferecer uma experiência de compra ética, prática e intuitiva para pessoas que se preocupam com o meio ambiente, os animais e a saúde.
 
-Bem-vindo(a) ao **Veganza**, um projeto de e-commerce dedicado a produtos alimentícios 100% veganos! O objetivo é proporcionar uma experiência fluida e amigável para quem busca uma alimentação ética e sustentável.
+📜 Sumário
+🛠️ Tecnologias Utilizadas
 
----
+🚀 Funcionalidades
 
-## 📜 Sumário
+🌐 Navegação e Experiência do Usuário
 
-- [🌱 Veganza - Loja de Produtos Veganos](#-veganza---loja-de-produtos-veganos)
-  - [📜 Sumário](#-sumário)
-  - [🛠️ Tecnologias Utilizadas](#️-tecnologias-utilizadas)
-  - [🚀 Funcionalidades](#-funcionalidades)
-  - [🔧 Como Rodar o Projeto Localmente](#-como-rodar-o-projeto-localmente)
-  - [🌟 Contribuições](#-contribuições)
-  - [📄 Licença](#-licença)
+🔧 Como Rodar o Projeto Localmente
 
-## 🛠️ Tecnologias Utilizadas
+🌟 Contribuições
 
-- ![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=flat&logo=html5&logoColor=white) **HTML5**: Estrutura do site.
-- ![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?style=flat&logo=css3&logoColor=white) **CSS3**: Estilização e responsividade.
-- ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=flat&logo=javascript&logoColor=black) **JavaScript**: Funcionalidades dinâmicas no front-end.
-- ![Python](https://img.shields.io/badge/Python-%233776AB.svg?style=flat&logo=python&logoColor=white) **Python**: Lógica e manipulação de dados no back-end.
-- ![Flask](https://img.shields.io/badge/Flask-%23000000.svg?style=flat&logo=flask&logoColor=white) **Flask**: Framework para criação do servidor e integração back-end/front-end.
+📄 Licença
 
----
+🛠️ Tecnologias Utilizadas
+Este projeto foi desenvolvido com as seguintes tecnologias:
 
-## 🚀 Funcionalidades
+HTML5 – Estruturação semântica das páginas.
 
-- **Catálogo de produtos**: Visualização de diversos itens veganos disponíveis para compra.
-- **Sistema de busca**: Encontre seus produtos favoritos rapidamente.
-- **Carrinho de compras**: Adicione, remova e veja o total dos produtos selecionados.
-- **Autenticação de usuários**: Criação de conta, login e gerenciamento de informações do perfil.
-- **Simulação de compra**: Finalize pedidos e receba uma simulação de conclusão.
+CSS3 – Estilo visual e design responsivo para diferentes dispositivos.
 
----
+JavaScript – Interatividade e funcionalidades do lado do cliente.
 
-## 🔧 Como Rodar o Projeto Localmente
+Python – Lógica de negócios e manipulação de dados no back-end.
 
-1. **Clone o repositório**:  
-   ```bash
-   git clone https://github.com/seu-usuario/veganza.git
-   cd veganza
-   python -m venv .venv
-   .venv\Scripts\activate
-   pip install -r requirements.txt
+Flask – Framework web utilizado para criar a API e servir as páginas.
 
-## 🌐 Navegação
+🚀 Funcionalidades
+O Veganza oferece todos os recursos esperados em um e-commerce moderno:
 
-    navegue por todas as nossas funcionalidades criando sua conta com segurança, para acessar o perfil de administrador utilize as credenciais:
-    admin
-    admin123
-    
-## 📝 Contribuição
-Desenvolvido por:
-- [Fernanda Amorim](https://github.com/fernanda310)
-- [Luana Nichellati](https://github.com/luanaNichelatti)
+🛍️ Catálogo de Produtos
+Visualize uma ampla variedade de produtos veganos com informações detalhadas, imagens e preços.
+
+🔎 Sistema de Busca e Filtros
+Encontre facilmente produtos por nome, categoria ou palavras-chave.
+
+🛒 Carrinho de Compras Dinâmico
+Adicione, remova e atualize itens no carrinho. Visualize o valor total em tempo real.
+
+👤 Autenticação e Perfil de Usuário
+Crie uma conta, faça login e acesse seu perfil para gerenciar dados pessoais e histórico de compras.
+
+📦 Simulação de Compra
+Simule a finalização do pedido com confirmação visual e feedback ao usuário (checkout).
+
+🧑‍💼 Área Administrativa (Backoffice)
+Acesse como administrador para gerenciar produtos e usuários.
+
+Login Admin: admin
+Senha Admin: admin123
+
+🌐 Navegação e Experiência do Usuário
+Ao acessar o Veganza, você poderá:
+
+Explorar o catálogo de produtos diretamente na página inicial.
+
+Criar uma conta com segurança para salvar preferências e histórico de compras.
+
+Adicionar itens ao carrinho e revisar seu pedido antes de simular a compra.
+
+Acessar o painel de administrador (se autorizado) para gerenciar os dados da loja.
+
+Navegar com fluidez por um layout intuitivo e responsivo, adaptado para dispositivos móveis.
+
+🔧 Como Rodar o Projeto Localmente
+Siga os passos abaixo para executar o projeto em sua máquina local:
+
+Clone o repositório:
+
+bash
+Copiar
+Editar
+git clone https://github.com/seu-usuario/veganza.git
+cd veganza
+Crie e ative um ambiente virtual:
+
+bash
+Copiar
+Editar
+python -m venv .venv
+# No Windows
+.venv\Scripts\activate
+# No macOS/Linux
+source .venv/bin/activate
+Instale as dependências:
+
+bash
+Copiar
+Editar
+pip install -r requirements.txt
+Execute o servidor:
+
+bash
+Copiar
+Editar
+flask run
+🌟 Contribuições
+Este projeto foi desenvolvido com dedicação por:
+
+Fernanda Amorim
+
+Luana Nichellati
+
+Contribuições são muito bem-vindas! Sinta-se à vontade para abrir issues ou pull requests com melhorias ou correções.
+
+📄 Licença
+Este projeto está licenciado sob a MIT License.
+
