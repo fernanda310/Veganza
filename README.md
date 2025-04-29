@@ -74,46 +74,32 @@ O Veganza oferece todos os recursos esperados de um e-commerce moderno:
    cd veganza
 Crie e ative o ambiente virtual:
 
-bash
-Copiar
-Editar
-python -m venv .venv
+   ```bash
+   python -m venv .venv
+
 No Windows:
+   ```bash
+    .venv\Scripts\activate
 
-bash
-Copiar
-Editar
-.venv\Scripts\activate
 No macOS/Linux:
+   ```bash
+  source .venv/bin/activate
 
-bash
-Copiar
-Editar
-source .venv/bin/activate
 Instale as dependências:
+   ```bash
+  pip install -r requirements.txt
 
-bash
-Copiar
-Editar
-pip install -r requirements.txt
 Inicie a aplicação:
+   ```bash
+   flask run
 
-bash
-Copiar
-Editar
-flask run
 Acesse no navegador:
-
-arduino
-Copiar
-Editar
 http://localhost:5000
-🤝 Contribuições
+
+
+## 🤝 Contribuições
 Este projeto foi desenvolvido por:
+- [Fernanda Amorim](https://github.com/fernanda310)
+- [Luana Nichellati](https://github.com/luanaNichelatti)
 
-Fernanda Amorim
 
-Luana Nichellati
-
-Contribuições são bem-vindas!
-Você pode abrir issues, enviar pull requests ou sugerir melhorias no repositório.
