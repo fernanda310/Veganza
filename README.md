@@ -72,16 +72,17 @@ O Veganza oferece todos os recursos esperados de um e-commerce moderno:
    ```bash
    git clone https://github.com/seu-usuario/veganza.git
    cd veganza
-Crie e ative o ambiente virtual:
+   
+2. **Crie e ative o ambiente virtual:**
 
    ```bash
    python -m venv .venv
 
-No Windows:
+  **No Windows:**
    ```bash
     .venv\Scripts\activate
 
-No macOS/Linux:
+ **No macOS/Linux:**
    ```bash
   source .venv/bin/activate
 
