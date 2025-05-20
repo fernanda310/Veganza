@@ -17,7 +17,7 @@ prepend_sys_path = .
 
 # timezone to use when rendering the date within the migration file
 # as well as the filename.
-# If specified, requires the python>=3.9 or backports.zoneinfo library.
+# If specified, requires the python>=3.9 or backports.zoneinfo library and tzdata library.
 # Any required deps can installed by adding `alembic[tz]` to the pip requirements
 # string value is passed to ZoneInfo()
 # leave blank for localtime
@@ -49,7 +49,10 @@ prepend_sys_path = .
 # version_path_separator = :
 # version_path_separator = ;
 # version_path_separator = space
-version_path_separator = os  # Use os.pathsep. Default configuration used for new projects.
+# version_path_separator = newline
+#
+# Use os.pathsep. Default configuration used for new projects.
+version_path_separator = os
 
 # set to 'true' to search source files recursively
 # in each "version_locations" directory
@@ -78,7 +81,7 @@ sqlalchemy.url = driver://user:pass@localhost/dbname
 # hooks = ruff
 # ruff.type = exec
 # ruff.executable = %(here)s/.venv/bin/ruff
-# ruff.options = --fix REVISION_SCRIPT_FILENAME
+# ruff.options = check --fix REVISION_SCRIPT_FILENAME
 
 # Logging configuration
 [loggers]
@@ -91,12 +94,12 @@ keys = console
 keys = generic
 
 [logger_root]
-level = WARN
+level = WARNING
 handlers = console
 qualname =
 
 [logger_sqlalchemy]
-level = WARN
+level = WARNING
 handlers =
 qualname = sqlalchemy.engine
 
