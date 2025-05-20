@@ -22,8 +22,6 @@ Essa jornada foi desafiadora, mas extremamente enriquecedora, contribuindo signi
 - [🌐 Navegação e Experiência do Usuário](#-navegação-e-experiência-do-usuário)
 - [🔧 Como Rodar o Projeto Localmente](#-como-rodar-o-projeto-localmente)
 - [🤝 Contribuições](#-contribuições)
-- [📄 Licença](#-licença)
-
 ---
 
 ## 🛠️ Tecnologias Utilizadas
@@ -133,6 +131,3 @@ Este projeto foi desenvolvido por:
 - [Luana Nichellati](https://github.com/luanaNichelatti)
 ---
 
-## 📄 Licença
-
-Este projeto está licenciado sob a [MIT License](LICENSE).
