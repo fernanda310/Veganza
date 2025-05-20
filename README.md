@@ -5,6 +5,8 @@ Toda a documentação completa do projeto pode ser acessada através deste link:
 
 Essa jornada foi desafiadora, mas extremamente enriquecedora, contribuindo significativamente para o nosso crescimento técnico e profissional.
 
+  
+---
 
 
 # 🌱 Veganza - Loja de Produtos Veganos
