@@ -1,3 +1,12 @@
+# 📚 Contexto Acadêmico
+Este projeto foi desenvolvido como Trabalho de Conclusão do curso Técnico em Desenvolvimento de Sistemas no SESI/SENAI. O desenvolvimento ocorreu ao longo de aproximadamente 4 meses e abrangeu todas as etapas fundamentais: levantamento de requisitos, prototipação, desenvolvimento, testes e apresentação final.
+
+Toda a documentação completa do projeto pode ser acessada através deste link: [inserir link aqui].
+
+Essa jornada foi desafiadora, mas extremamente enriquecedora, contribuindo significativamente para o nosso crescimento técnico e profissional.
+
+
+
 # 🌱 Veganza - Loja de Produtos Veganos
 
 **Veganza** é um e-commerce voltado exclusivamente à comercialização de produtos alimentícios 100% veganos. Este projeto visa oferecer uma experiência de compra ética, acessível e sustentável, atendendo consumidores conscientes e preocupados com o bem-estar animal e o meio ambiente.
@@ -120,10 +129,6 @@ Este projeto foi desenvolvido por:
 
 - [Fernanda Amorim](https://github.com/fernanda310)  
 - [Luana Nichellati](https://github.com/luanaNichelatti)
-
-Contribuições são bem-vindas!  
-Você pode abrir **issues**, enviar **pull requests** ou sugerir melhorias no repositório.
-
 ---
 
 ## 📄 Licença
