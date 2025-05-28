@@ -1,7 +1,7 @@
 # 📚 Contexto Acadêmico
 Este projeto foi desenvolvido como Trabalho de Conclusão do curso Técnico em Desenvolvimento de Sistemas no SESI/SENAI. O desenvolvimento ocorreu ao longo de aproximadamente 4 meses e abrangeu todas as etapas fundamentais: levantamento de requisitos, prototipação, desenvolvimento, testes e apresentação final.
 
-Toda a documentação completa do projeto pode ser acessada através deste link: [inserir link aqui].
+Toda a documentação completa do projeto pode ser acessada através deste link: https://l1nk.dev/veganza-documentation 
 
 Essa jornada foi desafiadora, mas extremamente enriquecedora, contribuindo significativamente para o nosso crescimento técnico e profissional.
 
