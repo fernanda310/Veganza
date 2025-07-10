@@ -103,10 +103,8 @@ def page_logout():
 @login_required
 def page_perfil():
     if request.method == "POST":
-        # Atualiza o usuário
         current_user.usuario = request.form['usuario']
         current_user.email = request.form['email']
-        # Aqui você pode adicionar lógica para salvar o endereço e outras informações
         new_senha = request.form['senha1']
         confirm_senha = request.form['senha2']
 
@@ -146,26 +144,21 @@ def criar_produto():
             filename = secure_filename(imagem.filename)
             caminho_imagem = os.path.join(app.config['UPLOAD_FOLDER'], filename)
 
-            # Certifique-se de que o diretório de destino existe
             if not os.path.exists(app.config['UPLOAD_FOLDER']):
                 os.makedirs(app.config['UPLOAD_FOLDER'])
 
-            imagem.save(caminho_imagem)  # Salva a imagem no diretório
-
+            imagem.save(caminho_imagem) 
         else:
-            filename = 'default.png'  # Imagem padrão caso nenhuma seja enviada ou não seja válida.
-
-        # Criar novo produto
+            filename = 'default.png' 
         novo_produto = Item(
             nome=form.nome.data,
             preco=form.preco.data,
             cod_barra=form.cod_barra.data,
             descricao=form.descricao.data,
             imagem=filename,
-            dono=current_user.id  # Relacionar o produto ao usuário atual.
+            dono=current_user.id  
         )
 
-        # Salvar no banco de dados
         db.session.add(novo_produto)
         db.session.commit()
 

@@ -176,8 +176,7 @@
 </div>
 
 <!-- Modal de pagamento -->
-<div class="modal fade" id="pagaModal-{{ item.Id }}" tabindex="-1" aria-labelledby="pagaModalLabel-{{ item.Id }}"
-  aria-hidden="true">
+<div class="modal fade" id="pagaModal-{{ item.Id }}" tabindex="-1" aria-labelledby="pagaModalLabel-{{ item.Id }}" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
@@ -190,22 +189,19 @@
         <!-- Opções de Pagamento -->
         <h6 class="mb-3"><strong>Escolha a forma de pagamento:</strong></h6>
         <div class="form-check mb-2">
-          <input class="form-check-input" type="radio" name="formaPagamento-{{ item.Id }}" id="credito-{{ item.Id }}"
-            value="credito">
+          <input class="form-check-input" type="radio" name="formaPagamento-{{ item.Id }}" id="credito-{{ item.Id }}" value="credito">
           <label class="form-check-label" for="credito-{{ item.Id }}">
             <i class="far fa-credit-card me-2"></i>Cartão de Crédito
           </label>
         </div>
         <div class="form-check mb-2">
-          <input class="form-check-input" type="radio" name="formaPagamento-{{ item.Id }}" id="debito-{{ item.Id }}"
-            value="debito">
+          <input class="form-check-input" type="radio" name="formaPagamento-{{ item.Id }}" id="debito-{{ item.Id }}" value="debito">
           <label class="form-check-label" for="debito-{{ item.Id }}">
             <i class="fas fa-credit-card me-2"></i>Cartão de Débito
           </label>
         </div>
         <div class="form-check mb-2">
-          <input class="form-check-input" type="radio" name="formaPagamento-{{ item.Id }}" id="pix-{{ item.Id }}"
-            value="pix">
+          <input class="form-check-input" type="radio" name="formaPagamento-{{ item.Id }}" id="pix-{{ item.Id }}" value="pix">
           <label class="form-check-label" for="pix-{{ item.Id }}">
             <i class="fas fa-qrcode me-2"></i>Pix
           </label>
@@ -214,6 +210,92 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
         <button type="button" class="btn btn-primary" onclick="processarPagamento('{{ item.Id }}')">Continuar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Cartão de Crédito -->
+<div class="modal fade" id="creditoModal-{{ item.Id }}" tabindex="-1" aria-labelledby="creditoLabel-{{ item.Id }}" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-3">
+      <div class="modal-header">
+        <h5 class="modal-title" id="creditoLabel-{{ item.Id }}">Pagamento com Cartão de Crédito</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+      </div>
+      <div class="modal-body">
+        <input class="form-control mb-3" type="text" placeholder="Número do cartão">
+        <input class="form-control mb-3" type="text" placeholder="Nome no cartão">
+        <div class="row">
+          <div class="col-6">
+            <input class="form-control mb-3" type="text" placeholder="Validade">
+          </div>
+          <div class="col-6">
+            <input class="form-control mb-3" type="text" placeholder="CVV">
+          </div>
+        </div>
+        <button class="btn btn-primary w-100" onclick="mostrarConfirmacao('{{ item.Id }}')">Confirmar Pagamento</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Cartão de Débito -->
+<div class="modal fade" id="debitoModal-{{ item.Id }}" tabindex="-1" aria-labelledby="debitoLabel-{{ item.Id }}" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-3">
+      <div class="modal-header">
+        <h5 class="modal-title" id="debitoLabel-{{ item.Id }}">Pagamento com Cartão de Débito</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+      </div>
+      <div class="modal-body">
+        <input class="form-control mb-3" type="text" placeholder="Número do cartão">
+        <input class="form-control mb-3" type="text" placeholder="Nome no cartão">
+        <div class="row">
+          <div class="col-6">
+            <input class="form-control mb-3" type="text" placeholder="Validade">
+          </div>
+          <div class="col-6">
+            <input class="form-control mb-3" type="text" placeholder="CVV">
+          </div>
+        </div>
+        <button class="btn btn-primary w-100" onclick="mostrarConfirmacao('{{ item.Id }}')">Confirmar Pagamento</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Pix -->
+<div class="modal fade" id="pixModal-{{ item.Id }}" tabindex="-1" aria-labelledby="pixLabel-{{ item.Id }}" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-3">
+      <div class="modal-header">
+        <h5 class="modal-title" id="pixLabel-{{ item.Id }}">Pagamento via Pix</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+      </div>
+      <div class="modal-body text-center">
+        <p>Escaneie o QR Code abaixo:</p>
+        <img src="/static/img/QRcode.png" alt="QR Code Pix" class="img-fluid mb-3" style="max-width: 200px;">
+        <p class="mb-1">Ou copie a chave:</p>
+        <code>Veganza@pix.com</code>
+        <button class="btn btn-success mt-3 w-100" onclick="mostrarConfirmacao('{{ item.Id }}')">Confirmar Pagamento</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal de Confirmação -->
+<div class="modal fade" id="confirmacaoModal-{{ item.Id }}" tabindex="-1" aria-labelledby="confirmacaoLabel-{{ item.Id }}" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center p-4">
+      <div class="modal-body">
+        <i class="fas fa-check-circle text-success mb-3" style="font-size: 3rem;"></i>
+        <h5 class="mb-2">Pagamento realizado com sucesso!</h5>
+        <p>Obrigado pela sua compra.</p>
+        <button type="button" class="btn btn-success mt-3" data-bs-dismiss="modal">Fechar</button>
       </div>
     </div>
   </div>
@@ -700,34 +782,29 @@
     }
   }
 </style>
-
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () {
     // Quantidade
     const minusBtn = document.querySelector('.quantity-btn.minus');
     const plusBtn = document.querySelector('.quantity-btn.plus');
     const quantityInput = document.querySelector('.quantity-input');
-    
+
     if (minusBtn && plusBtn && quantityInput) {
-      minusBtn.addEventListener('click', function() {
+      minusBtn.addEventListener('click', function () {
         let value = parseInt(quantityInput.value);
-        if (value > 1) {
-          quantityInput.value = value - 1;
-        }
+        if (value > 1) quantityInput.value = value - 1;
       });
-      
-      plusBtn.addEventListener('click', function() {
+
+      plusBtn.addEventListener('click', function () {
         let value = parseInt(quantityInput.value);
-        if (value < 10) {
-          quantityInput.value = value + 1;
-        }
+        if (value < 10) quantityInput.value = value + 1;
       });
     }
-    
+
     // Wishlist
     const wishlistBtn = document.querySelector('.wishlist-btn');
     if (wishlistBtn) {
-      wishlistBtn.addEventListener('click', function() {
+      wishlistBtn.addEventListener('click', function () {
         const icon = this.querySelector('i');
         if (icon.classList.contains('far')) {
           icon.classList.remove('far');
@@ -741,27 +818,37 @@
       });
     }
   });
-  
-  // Manter o JavaScript existente
-  function processarPagamento(itemId) {
+
+
+
+   function processarPagamento(itemId) {
     const formaPagamento = document.querySelector('input[name="formaPagamento-' + itemId + '"]:checked');
-    
+
     if (!formaPagamento) {
       alert('Por favor, selecione uma forma de pagamento.');
       return;
     }
 
-    // Abrir o modal correspondente à forma de pagamento escolhida
-    if (formaPagamento.value === 'credito') {
-      const creditoModal = new bootstrap.Modal(document.getElementById('creditoModal-' + itemId));
-      creditoModal.show();
-    } else if (formaPagamento.value === 'debito') {
-      const debitoModal = new bootstrap.Modal(document.getElementById('debitoModal-' + itemId));
-      debitoModal.show();
-    } else if (formaPagamento.value === 'pix') {
-      const pixModal = new bootstrap.Modal(document.getElementById('pixModal-' + itemId));
-      pixModal.show();
+    const modalAtual = bootstrap.Modal.getInstance(document.getElementById('pagaModal-' + itemId));
+    if (modalAtual) {
+      modalAtual.hide();
     }
+
+    const modalId = formaPagamento.value + 'Modal-' + itemId;
+    const proximoModal = new bootstrap.Modal(document.getElementById(modalId));
+    proximoModal.show();
+  }
+
+  function mostrarConfirmacao(itemId) {
+    const modais = ['creditoModal-', 'debitoModal-', 'pixModal-'];
+    modais.forEach(id => {
+      const modalEl = document.getElementById(id + itemId);
+      const instance = bootstrap.Modal.getInstance(modalEl);
+      if (instance) instance.hide();
+    });
+
+    const confirmModal = new bootstrap.Modal(document.getElementById('confirmacaoModal-' + itemId));
+    confirmModal.show();
   }
 </script>
 {% endblock %}
